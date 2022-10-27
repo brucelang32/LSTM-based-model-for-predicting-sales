@@ -40,7 +40,7 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
     return agg
 
 # load dataset
-dataset = read_csv('D:\zxq.csv', header=0, index_col=0)
+dataset = read_csv('D:\data.csv', header=0, index_col=0)
 values = dataset.values
 # integer encode direction
 encoder = LabelEncoder()
@@ -105,7 +105,7 @@ print(inv_yhat )
 pyplot.figure()
 pyplot.plot(range(len(inv_yhat)),inv_yhat, 'b', label="predict")
 pyplot.plot(range(len(inv_y)),inv_y, 'r', label="test")
-pyplot.legend(loc="upper right")  # 显示图中的标签
+pyplot.legend(loc="upper right") 
 pyplot.xlabel("the number of sales")
 pyplot.ylabel('value of sales')
 pyplot.show()
